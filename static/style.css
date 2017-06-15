@@ -1,0 +1,363 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color:#fff;
+    color:#000;
+    font-size:14px;
+    font-weight:normal;
+    font-family: 'Roboto', sans-serif;
+    height:auto;
+    line-height:1.4;
+    margin:auto;
+    width:100%;
+    min-height:100%;
+    min-width:800px;
+}
+.wrapper {
+    margin: auto 5%;
+    width: 90%;
+    position: relative;
+}
+div.bg{
+    background-color:#EEEDEF;
+    min-height:200px;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+div.content{
+    width:100%;
+    font-size:100%;
+    font-weight: normal;
+    padding-top:120px;
+    max-width:1200px;
+    margin:auto;
+}
+div.content div.cover{
+    background-color:#D8D8D8;
+    min-height:350px;
+    width:35%;
+    display:inline-block;
+    float:left;
+    position:relative;
+}
+div.content div.cover h3.title {
+    position: absolute;
+    padding: 20px;
+    color:#0165A7;
+    background-color: #fff;
+    border-bottom: 10px solid #0165A7;
+    right: -30%;
+    top: 40px;
+}
+div.content ul.articles{
+    width:65%;
+    display:inline-block;
+    float:left;
+    padding-top:160px;
+}
+div.content ul.articles li {
+    display: inline-block;
+    margin: auto;
+    min-height: 180px;
+    width: calc(33% - 20px);
+    padding: 10px 10px 0;
+    border-right:1px dashed #EEEDEF;
+    text-align: center;
+    list-style: none;
+    float:left;
+    position:relative;
+}
+div.content ul.articles li:last-child{
+    border-right:0;
+}
+div.content ul.articles li h3{
+    color: #000;
+    text-align:left;
+    font-size:100%;
+    position:absolute;
+    top:10px;
+    width:calc(100% - 20px);
+}
+div.content ul.articles li figure {
+    width: calc(100% - 20px);
+    min-height: 100px;
+    background-color: #D8D8D8;
+    position: absolute;
+    bottom: 0;
+}
+.hover:hover,
+div.content ul.articles li:hover{
+    -webkit-transform:scale(0.9);
+    -moz-transform:scale(0.9);
+    -ms-transform:scale(0.9);
+    -o-transform:scale(0.9);
+    transform:scale(0.9);
+    cursor:pointer;
+}
+div.overlay{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    display:none;
+    background-color:rgba(0, 0, 0, 0.8);
+    text-align:center;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    -ms-transition: opacity 400ms ease-in;
+    -oo-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+}
+div.overlay .popup-outer {
+    width: 750px;
+    margin: auto;
+    height: auto;
+    display: inline-table;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+div.overlay .popup-outer .popup-content{
+    display:table-cell;
+    vertical-align: middle;
+    width:100%;
+}
+.popup-content .popup-head{
+    padding:20px;
+    background-color:#0165A7;
+    width:calc(100% - 40px);
+    position:relative;
+}
+.popup-content .popup-head h3 {
+    width: calc(100% - 30px);
+    color: #fff;
+    text-align: left;
+    font-size: 2em;
+}
+.popup-content .popup-head h3 span {
+    font-size: 32px;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
+    width: 30px;
+    float: right;
+    display: inline-block;
+    text-align: right;
+    right: -20px;
+}
+.popup-content .popup-body {
+    background-color: #fff;
+    padding: 20px;
+    text-align:left;
+    font-size:1.5em;
+}
+.popup-content .popup-body span {
+    position: relative;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+    font-weight: bold;
+}
+.popup-content .popup-body span a{
+    color:inherit;
+}
+.popup-content .popup-body span a:hover{
+    color:#333;
+}
+.popup-head h3 .close:hover {
+    text-shadow: 0px 0px 10px #333;
+}
+/*ipad media queries*/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    div.wrapper{
+        width:80%;
+        margin:auto 10%;
+    }
+    div.content ul.articles {
+        width: 62.25%;
+        display: inline-block;
+        float: left;
+        padding-top: 0;
+        padding: 0 10px;
+        background-color: #fff;
+    }
+    div.content ul.articles li {
+        display: inline-table;
+        margin: auto;
+        min-height: 100px;
+        width: 100%;
+        padding: 8px 0;
+        border-right: 0;
+        text-align: center;
+        list-style: none;
+        float: none;
+        position: relative;
+        background-color: #fff;
+        border-bottom: 1px dashed #EEEDEF;
+    }
+    div.content ul.articles li:last-child{
+        border-bottom:0;
+    }
+    div.content ul.articles li h3 {
+        color: #000;
+        text-align: left;
+        font-size: 1.4em;
+        position: relative;
+        top: auto;
+        width: auto;
+        max-width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    div.content ul.articles li figure {
+        width: 30%;
+        height: 100%;
+        background-color: #D8D8D8;
+        position: relative;
+        bottom: auto;
+        right: 0;
+        display: table-cell;
+    }
+    div.content div.cover h3.title {
+        right: auto;
+        top: auto;
+        bottom: -40px;
+    }
+    div.overlay .popup-outer {
+        width:90%;
+        margin:auto 5%;
+    }
+    .popup-content .popup-head h3 {
+        width: calc(100% - 90px);
+        font-size: 2em;
+    }
+    .popup-content .popup-body {
+        font-size: 1.5em;
+    }
+    .popup-content .popup-head h3 span {
+        font-size: 2em;
+        right: -60px;
+        top: -20px;
+    }
+}
+/*end of ipad media queries*/
+
+
+/*mobile media queries*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 2){
+    div.bg{
+        display:none;
+    }
+    .wrapper {
+        margin: auto;
+        width: 100%;
+        position: relative;
+    }
+    div.content {
+        width: 100%;
+        max-width: 100%;
+        margin: auto;
+        padding:0;
+    }
+    div.content div.cover {
+        min-height: 25vh;
+        width: 100%;
+        display: inline-block;
+        float: none;
+        clear: both;
+    }
+    div.content div.cover h3.title {
+        right: 0;
+        bottom: 15%;
+        font-size: 40px;
+        top:auto;
+    }
+    .hover:hover,
+    div.content ul.articles li:hover{
+        -webkit-transform:scale(1);
+        -moz-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1);
+        cursor:pointer;
+    }
+    div.content ul.articles {
+        width: 100%;
+        display: inline-block;
+        float: none;
+        padding-top: 0;
+    }
+    div.content ul.articles li {
+        display: inline-table;
+        margin: auto;
+        min-height: 150px;
+        width: calc(100% - 80px);
+        padding: 40px;
+        border-right: 0;
+        text-align: center;
+        list-style: none;
+        float: none;
+        position: relative;
+        background-color: #fff;
+        border-bottom: 2px dashed #EEEDEF;
+    }
+    div.content ul.articles li:last-child{
+        border-bottom:0;
+    }
+    div.content ul.articles li h3 {
+        color: #000;
+        text-align: left;
+        font-size: 35px;
+        position: relative;
+        top: auto;
+        width: auto;
+        max-width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    div.content ul.articles li figure {
+        width: 30%;
+        height: 100%;
+        background-color: #D8D8D8;
+        position: relative;
+        bottom: auto;
+        right: 0;
+        display: table-cell;
+    }
+    div.overlay .popup-outer {
+        width:90%;
+        margin:auto 5%;
+    }
+    .popup-content .popup-head h3 {
+        width: calc(100% - 90px);
+        font-size: 4.5vw;
+    }
+    .popup-content .popup-body {
+        font-size: 4vw;
+    }
+    .popup-content .popup-head h3 span {
+        font-size: 8vw;
+        right: -60px;
+        top: -50px;
+    }
+}
+/*end of mobile media queries*/

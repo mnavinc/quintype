@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Ad-blocker</title>
+<link rel="stylesheet" href="static/style.css" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="wrapper">
+        <div class="content">
+            <div class="cover hover" id="openModal">
+                <h3 class="title">Ad BLockers: Setback or Spark<br/>for Innovation?</h3>
+            </div>
+            <ul class="articles">
+                <li><h3>The real reasons why making money with online media is hard</h3><figure class="img"></figure></li>
+                <li><h3>How Motherly uses Personalization to Create Engagement</h3><figure class="img"></figure></li>
+                <li><h3>Fixing email overload, and now chat overload, for content teams</h3><figure class="img"></figure></li>
+            </ul>
+        </div>
+        <div class="overlay" id="modalpane">
+            <div class="popup-outer">
+                <div class="popup-content">
+                    <div class="popup-head">
+                        <h3>Ad Blockers: Setback or Spark for Innovation<span class="close">&times;</span></h3>
+                    </div>
+                    <div class="popup-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales tortor dui, ultrices pretium dolor semper vulputate. Nam id convallis ante. Pellentesque porta leo et vulputate malesuada. Phasellus auctor placerat erat, nec mattis ex lacinia et. Etiam ultricies pretium laoreet. Nulla consectetur, libero sit amet facilisis mattis, quam metus volutpat turpis, faucibus tristique sapien felis sed lorem. Mauris ex quam, finibus eu hendrerit id, tristique vel velit. Nullam efficitur sed dui ut tristique. Donec eget iaculis elit, luctus pretium orci. Praesent pellentesque pulvinar consectetur. Aliquam erat volutpat. Phasellus quis eros nec ipsum cursus sollicitudin ac id turpis.</p>
+                        <span><a href="#">Continue Reading..</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+var modal = document.getElementById('modalpane');
+var btn = document.getElementById("openModal");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+window.onkeydown = function(event) {
+    if ( event.keyCode == 27 ) {
+        modal.style.display = "none";
+    }
+};
+</script>
+</html>
